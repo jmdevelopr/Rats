@@ -1,0 +1,18 @@
+.Settings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--primary-black);
+    .option {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 4rem;
+        padding: 0 3.5rem;
+        p {
+            max-width: 19rem;
+        }
+    }
+}

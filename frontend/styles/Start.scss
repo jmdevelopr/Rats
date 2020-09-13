@@ -1,0 +1,25 @@
+.Start {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 12rem 0;
+    .logo {
+        flex: 8;
+    }
+    .start-content { 
+        flex: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        p {
+            font-family: 'Montserrat', sanf-serif;
+            color: var(--primary-black);
+        }
+        button {
+            width: 18rem;
+        }
+    }
+}

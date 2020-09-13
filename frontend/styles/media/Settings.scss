@@ -1,0 +1,38 @@
+@media screen and (min-width: 500px) {
+    .Settings {
+        .option {
+            width: 100%;
+            max-width: 60rem;
+            p {
+                max-width: 28rem;
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .Settings {
+        .option {
+            max-width: 75rem;
+            padding: 0 5rem;
+            p {
+                max-width: 48rem;
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .Settings {
+        .option {
+            max-width: 100rem;
+            padding: 0 7rem;
+            p {
+                max-width: 60rem;
+                font-size: 1.9rem;
+            }
+        }
+    }
+}

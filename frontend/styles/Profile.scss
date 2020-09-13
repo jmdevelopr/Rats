@@ -1,0 +1,56 @@
+.Profile {
+    min-width: 100%;
+    height: 36rem;
+    padding: 0 3.5rem;
+    display: grid;
+    grid-template-rows: 15rem
+                        3rem
+                        2rem
+                        8rem
+                        8rem
+                        8rem;
+    grid-template-areas: "profile-icon"
+                        "username"
+                        "email"
+                        "sign-out"
+                        "change-pass"
+                        "delete-acc";
+    
+    .icon {
+        grid-area: profile-icon;
+        font-size: 15rem;
+        color: var(--primary-gray);
+        align-self: center;
+        justify-self: center;
+    }
+    p {
+        text-align: center;
+    }
+    .username {
+        grid-area: username;
+        font-weight: 600;
+        color: var(--primary-black);
+        font-size: 1.8rem;
+    }
+    .email {
+        grid-area: email;
+        color: var(--primary-gray);
+        font-size: 1.4rem;
+    }
+    div {
+        align-self: center;
+    }
+    .sign-out {
+        grid-area: sign-out;
+    }
+    .change-pass {
+        grid-area: change-pass;
+    }
+    .delete-acc {
+        grid-area: delete-acc;
+    }
+    .sign-out, .change-pass, .delete-acc {
+        display: flex;
+        justify-content: center;
+    }
+}

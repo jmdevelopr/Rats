@@ -1,0 +1,23 @@
+.LogIn {
+    // position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    min-height: 87vh;
+    padding: 3rem 3.5rem 9rem;
+    .logo {
+        margin: 0 auto 4rem;
+    }
+    .input-sec {
+        margin-top: 3rem;
+        div {
+            color: var(--primary-pink);
+            width: 100%;
+            margin-top: .5rem;
+        }
+    }
+    .rats-btn {
+        margin-top: 5rem;
+    }
+}

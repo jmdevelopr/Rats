@@ -1,0 +1,66 @@
+@media screen and (min-width: 425px) {
+    .Home {
+        .post {
+            height: 60rem;
+            max-width: 50rem;
+            padding: 2rem 4rem;
+            .image {
+                width: 15rem;
+                height: 20rem;
+            }
+            .title {
+                font-size: 1.9rem;
+                max-width: 36rem;
+            }
+            .content {
+                font-size: 1.7rem;
+                max-width: 36rem;
+            }
+            button {
+                max-width: 14rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .Home {
+        .post {
+            height: 70rem;
+            max-width: 60rem;
+            .image {
+                width: 18rem;
+                height: 24rem;
+            }
+            .title {
+                font-size: 2rem;
+                max-width: 42rem;
+            }
+            .content {
+                font-size: 1.8rem;
+                max-width: 42rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .Home {
+        .post {
+            height: 75rem;
+            max-width: 60rem;
+            .image {
+                width: 24rem;
+                height: 32rem;
+            }
+            .title {
+                font-size: 2.2rem;
+                max-width: 100%;
+            }
+            .content {
+                font-size: 1.9rem;
+                max-width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{  
+    "compilerOptions": {  
+      "jsx": "react",  
+      "module": "commonjs",  
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "noImplicitAny": true,  
+      "preserveConstEnums": true,  
+      "removeComments": true,  
+      "target": "ES5",  
+      "allowSyntheticDefaultImports": true,
+      "typeRoots": ["typings", "./node_modules/@types"],
+    },  
+    "exclude": [  
+      "node_modules",  
+      "typings/browser.d.ts",  
+      "typings/browser"  
+    ]
+  }  

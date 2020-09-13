@@ -1,0 +1,34 @@
+.Home {
+    padding: 4rem 0;
+    .post {
+        background: var(--secondary-white);
+        height: 55rem;
+        width: 90vw;
+        margin: 0 auto 4rem;
+        box-shadow:
+          0 0.01rem 0.05rem rgba(0, 0, 0, 0.061),
+          0 0.04rem .18rem rgba(0, 0, 0, 0.089),
+          0 .2rem .8rem rgba(0, 0, 0, 0.15);
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 2rem 2rem;
+        color: var(--primary-black);
+        .image {
+            width: 12rem;
+            height: 16rem;
+            background: var(--primary-gray);
+        }
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
+        .content {
+            font-weight: 400;
+            font-size: 1.6rem;
+        }
+    }
+}
