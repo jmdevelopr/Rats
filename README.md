@@ -8,7 +8,7 @@ It is still in progress.
 2. Install the dependencies using the `npm i` command
 3. Start the web server using the `npm run node` command and go to http://localhost:3000/ on your browser
 
-##Features
+## Features
 - Authentication
   - users can sign up, log in and out
   - users get validated so there can't be two the same emails
@@ -30,15 +30,15 @@ It is still in progress.
   - users can toggle between a dark mode and light mode
   - all the preferences get saved so they stay the same in the next sessions
   
-##Known bugs yet to be fixed
+## Known bugs yet to be fixed
 - A user can't log in anymore after reacting to a post
 
-##Future features
+## Future features
 - Displaying images on the posts instead of gray rectangles
 - An artist account so they can add new posts on the website
 - Profile pictures
 
-##Dependencies used
+## Dependencies used
 - React
 - react-router
 - Redux
