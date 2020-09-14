@@ -23,6 +23,8 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(postRoutes);
 app.use(express.static('../dist'));
+app.use(express.static('../webpack.config'));
+app.use(express.static('../frontend'));
 
 const dbURI = `mongodb+srv://${env.MONGO_USER}:${env.MONGO_PASS}@ratsdb.nhfz4.mongodb.net/${env.MONGO_DB}?retryWrites=true&w=majority`;
 const options = { useNewUrlParser: true, useUnifiedTopology: true };
