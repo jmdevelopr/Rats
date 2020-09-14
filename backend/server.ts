@@ -35,10 +35,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
     publicPath: config.output.publicPath  
 })); 
 
-//app.use(function(req, res, next) {verifyJWT(req, res, next)})
-
 app.get('/*', (req: Request, res: Response) => {
-    const xd = "xd"
     res.sendFile(path.join(__dirname, '..', '/index.html'))
 })
 
