@@ -52,6 +52,6 @@ It is still in progress.
 - webpack
 
 ## What the app looks like
-![Screenshot of one post on mobile](https://github.com/jmdevelopr/Rats/blob/master/ss-post.jpg)
-![Screenshot of a profile on mobile](https://github.com/jmdevelopr/Rats/blob/master/ss-profile.jpg)
-![Screenshot of settings on dark mode](https://github.com/jmdevelopr/Rats/blob/master/ss-settings-pc-dark.jpg)
+![Screenshot of one post on mobile](https://github.com/jmdevelopr/Rats/blob/master/screenshots/ss-post.jpg)
+![Screenshot of a profile on mobile](https://github.com/jmdevelopr/Rats/blob/master/screenshots/ss-profile.jpg)
+![Screenshot of settings on dark mode](https://github.com/jmdevelopr/Rats/blob/master/screenshots/ss-settings-pc-dark.jpg)
