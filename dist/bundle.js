@@ -624,26 +624,26 @@ var App = (function (_super) {
         return (React.createElement(react_router_dom_1.BrowserRouter, null,
             React.createElement("div", { className: "App" },
                 React.createElement(react_router_dom_1.Switch, null,
-                    React.createElement(react_router_dom_1.Route, { exact: true, path: "/" },
+                    React.createElement(react_router_dom_1.Route, { exact: true, path: "/Rats" },
                         React.createElement(Nav_1.default, { dark: true }),
                         React.createElement(Home_1.default, null)),
-                    React.createElement(react_router_dom_1.Route, { path: "/settings" },
+                    React.createElement(react_router_dom_1.Route, { path: "/Rats/settings" },
                         React.createElement(Nav_1.default, null),
                         React.createElement(Back_1.default, null),
                         React.createElement(Settings_1.default, null)),
-                    React.createElement(react_router_dom_1.Route, { path: "/profile" },
+                    React.createElement(react_router_dom_1.Route, { path: "/Rats/profile" },
                         React.createElement(Nav_1.default, null),
                         React.createElement(Back_1.default, null),
                         React.createElement(Profile_1.default, null)),
-                    React.createElement(react_router_dom_1.Route, { path: "/start" },
+                    React.createElement(react_router_dom_1.Route, { path: "/Rats/start" },
                         React.createElement(Start_1.default, null)),
-                    React.createElement(react_router_dom_1.Route, { path: "/signup" },
+                    React.createElement(react_router_dom_1.Route, { path: "/Rats/signup" },
                         React.createElement(Back_1.default, { to: "start" }),
                         React.createElement(SignUp_1.default, null)),
-                    React.createElement(react_router_dom_1.Route, { path: "/login" },
+                    React.createElement(react_router_dom_1.Route, { path: "/Rats/login" },
                         React.createElement(Back_1.default, { to: "start" }),
                         React.createElement(LogIn_1.default, null)),
-                    React.createElement(react_router_dom_1.Route, { path: "/:id" },
+                    React.createElement(react_router_dom_1.Route, { path: "/Rats/:id" },
                         React.createElement(Nav_1.default, null),
                         React.createElement(Back_1.default, null),
                         React.createElement(Post_1.default, null))))));
@@ -735,7 +735,7 @@ var Home = (function (_super) {
                 React.createElement("div", { className: "image" }),
                 React.createElement("h3", { className: "title" }, post.title),
                 React.createElement("p", { className: "content" }, _this.shortenContent(post.content)),
-                React.createElement(react_router_dom_1.Link, { to: "/" + post._id },
+                React.createElement(react_router_dom_1.Link, { to: "/Rats/" + post._id },
                     React.createElement(Button_1.default, { name: "See more", color: "black" })))); })
             :
                 React.createElement("p", null, "Loading...")));
@@ -1383,10 +1383,10 @@ var Start = function () {
         React.createElement("div", { className: "logo" },
             React.createElement(logo_full_black_svg_1.default, null)),
         React.createElement("div", { className: "start-content" },
-            React.createElement(react_router_dom_1.Link, { to: "/signup" },
+            React.createElement(react_router_dom_1.Link, { to: "/Rats/signup" },
                 React.createElement(Button_1.default, { name: "Join for free", color: "black" })),
             React.createElement("p", null, "Or"),
-            React.createElement(react_router_dom_1.Link, { to: "/login" },
+            React.createElement(react_router_dom_1.Link, { to: "/Rats/login" },
                 React.createElement(Button_1.default, { name: "Log in", color: "white" })),
             React.createElement("p", null, "If you already have an account"))));
 };
@@ -1433,7 +1433,7 @@ __webpack_require__(/*! ../../styles/media/Back.scss */ "./frontend/styles/media
 var ArrowBack_1 = __importDefault(__webpack_require__(/*! @material-ui/icons/ArrowBack */ "./node_modules/@material-ui/icons/ArrowBack.js"));
 var react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 var Back = function (props) { return (React.createElement("div", { className: "Back" },
-    React.createElement(react_router_dom_1.Link, { to: props.to === "start" ? "/start" : "/", className: "link" },
+    React.createElement(react_router_dom_1.Link, { to: props.to === "/Rats/start" ? "/Rats/start" : "/Rats", className: "link" },
         React.createElement(ArrowBack_1.default, { className: "icon" })))); };
 exports.default = Back;
 
@@ -1704,7 +1704,7 @@ exports.createUser = function (userData) { return function (dispatch) { return _
     var data;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4, fetch('/api/auth/signup', {
+            case 0: return [4, fetch('/Rats/api/auth/signup', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(userData)
@@ -1723,7 +1723,7 @@ exports.logInUser = function (userData) { return function (dispatch) { return __
     var data;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4, fetch('/api/auth/login', {
+            case 0: return [4, fetch('/Rats/api/auth/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(userData)
@@ -1742,7 +1742,7 @@ exports.logOutUser = function () { return function (dispatch) { return __awaiter
     var data;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4, fetch('/api/auth/logout').then(function (res) { return res.json(); })];
+            case 0: return [4, fetch('/Rats/api/auth/logout').then(function (res) { return res.json(); })];
             case 1:
                 data = _a.sent();
                 dispatch({
@@ -1757,7 +1757,7 @@ exports.changePassword = function (id, currentPass, newPass) { return function (
     var data;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4, fetch('/api/auth/changepass', {
+            case 0: return [4, fetch('/Rats/api/auth/changepass', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ userID: id, currentPass: currentPass, newPass: newPass })
@@ -1776,7 +1776,7 @@ exports.deleteAcc = function (id) { return function (dispatch) { return __awaite
     var redirect;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4, fetch('/api/auth/deleteacc', {
+            case 0: return [4, fetch('/Rats/api/auth/deleteacc', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ userID: id })
@@ -1795,7 +1795,7 @@ exports.checkToken = function () { return function (dispatch) { return __awaiter
     var data;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4, fetch('/api/auth/token').then(function (res) { return res.json(); })];
+            case 0: return [4, fetch('/Rats/api/auth/token').then(function (res) { return res.json(); })];
             case 1:
                 data = _a.sent();
                 if (data.preferences)
@@ -1977,7 +1977,7 @@ exports.getPosts = function () { return function (dispatch) { return __awaiter(v
     var posts;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4, fetch('/api/posts').then(function (res) { return res.json(); })];
+            case 0: return [4, fetch('/Rats/api/posts').then(function (res) { return res.json(); })];
             case 1:
                 posts = _a.sent();
                 dispatch({
@@ -1992,7 +1992,7 @@ exports.getSinglePost = function (path) { return function (dispatch) { return __
     var post;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4, fetch("/api/posts" + path).then(function (res) { return res.json(); })];
+            case 0: return [4, fetch("/Rats/api/posts" + path).then(function (res) { return res.json(); })];
             case 1:
                 post = _a.sent();
                 dispatch({
@@ -2013,7 +2013,7 @@ exports.addComment = function (path, comment, nameDisplay) { return function (di
                     author: nameDisplay === false ? "Anonymous user" : comment.author,
                     comment: comment.comment,
                 };
-                return [4, fetch("/api/posts/" + path, {
+                return [4, fetch("/Rats/api/posts/" + path, {
                         method: 'PUT',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(data)
@@ -2038,7 +2038,7 @@ exports.reactAction = function (path, reactionName, userID) { return function (d
                     reactionName: reactionName,
                     userID: userID,
                 };
-                return [4, fetch("/api/react", {
+                return [4, fetch("/Rats/api/react", {
                         method: 'PUT',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(data)
@@ -2202,7 +2202,7 @@ exports.toggleNameDisplay = function (id, preferences) { return function (dispat
         switch (_a.label) {
             case 0:
                 data = { id: id, nameDisplay: preferences.nameDisplay, darkMode: preferences.darkMode };
-                return [4, fetch('/api/settings/changenamedisplay', {
+                return [4, fetch('/Rats/api/settings/changenamedisplay', {
                         method: 'PUT',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(data)
@@ -2223,7 +2223,7 @@ exports.toggleDarkMode = function (id, preferences) { return function (dispatch)
         switch (_a.label) {
             case 0:
                 data = { id: id, nameDisplay: preferences.nameDisplay, darkMode: preferences.darkMode };
-                return [4, fetch('/api/settings/changedarkmode', {
+                return [4, fetch('/Rats/api/settings/changedarkmode', {
                         method: 'PUT',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(data)
@@ -48191,7 +48191,7 @@ module.exports = function(originalModule) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Tomek\Desktop\rats-pull\Rats\frontend/index.tsx */"./frontend/index.tsx");
+module.exports = __webpack_require__(/*! C:\Users\Tomek\Desktop\rats\frontend/index.tsx */"./frontend/index.tsx");
 
 
 /***/ })
