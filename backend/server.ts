@@ -23,7 +23,14 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(postRoutes);
 app.use(express.static('../index.html'));
+
 app.use(express.static('../dist/bundle.js'));
+app.use(express.static('./dist/bundle.js'));
+app.use(express.static('./bundle.js'));
+
+app.use(express.static(path.join(__dirname, '..', '/dist', 'bundle.js')));
+app.use(express.static(path.join(__dirname, '/dist', 'bundle.js')));
+app.use(express.static(path.join(__dirname, 'bundle.js')));
 
 const dbURI = `mongodb+srv://${env.MONGO_USER}:${env.MONGO_PASS}@ratsdb.nhfz4.mongodb.net/${env.MONGO_DB}?retryWrites=true&w=majority`;
 const options = { useNewUrlParser: true, useUnifiedTopology: true };
