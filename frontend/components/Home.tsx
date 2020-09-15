@@ -30,7 +30,7 @@ class Home extends React.Component<Props, any> {
                             <div className="image" />
                             <h3 className="title">{post.title}</h3>
                             <p className="content">{this.shortenContent(post.content)}</p>
-                            <Link to={`/${post._id}`}><Button name="See more" color="black"/></Link>
+                            <Link to={`/Rats/${post._id}`}><Button name="See more" color="black"/></Link>
                         </div>
                     ))
                     :

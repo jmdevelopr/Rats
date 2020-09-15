@@ -11,9 +11,9 @@ const Start: React.FC = () => {
         <div className="Start">
             <div className="logo"><Logo /></div>
             <div className="start-content">
-                <Link to="/signup"><Button name="Join for free" color="black"/></Link>
+                <Link to="/Rats/signup"><Button name="Join for free" color="black"/></Link>
                 <p>Or</p>
-                <Link to="/login"><Button name="Log in" color="white"/></Link>
+                <Link to="/Rats/login"><Button name="Log in" color="white"/></Link>
                 <p>If you already have an account</p>
             </div>
         </div>

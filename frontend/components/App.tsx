@@ -40,32 +40,32 @@ class App extends React.Component<Props, any> {
       <Router>
         <div className="App">
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/Rats">
               <Nav dark/>
               <Home />
             </Route>
-            <Route path="/settings">
+            <Route path="/Rats/settings">
               <Nav />
               <Back />
               <Settings />
             </Route>
-            <Route path="/profile">
+            <Route path="/Rats/profile">
               <Nav />
               <Back />
               <Profile />
             </Route>
-            <Route path="/start">
+            <Route path="/Rats/start">
               <Start />
             </Route>
-            <Route path="/signup">
+            <Route path="/Rats/signup">
               <Back to="start"/>
               <SignUp />
             </Route>
-            <Route path="/login">
+            <Route path="/Rats/login">
               <Back to="start"/>
               <LogIn />
             </Route>
-            <Route path="/:id">
+            <Route path="/Rats/:id">
               <Nav />
               <Back />
               <Post />

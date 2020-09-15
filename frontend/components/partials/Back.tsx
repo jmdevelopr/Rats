@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Back: React.ReactType = (props: IProps) => (
     <div className="Back">
-        <Link to={props.to === "start" ? "/start" : "/"} className="link">
+        <Link to={props.to === "/Rats/start" ? "/Rats/start" : "/Rats"} className="link">
             <ArrowBackIcon className="icon"/>
         </Link>
     </div>
