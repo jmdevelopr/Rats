@@ -1542,11 +1542,11 @@ var Nav = (function (_super) {
     Nav.prototype.render = function () {
         var isDark = this.props.dark ? false : true;
         return (React.createElement("div", { className: "Nav " + (this.props.dark ? 'dark' : '') },
-            React.createElement(react_router_dom_1.Link, { to: "/", className: "logo" }, this.props.darkMode === isDark ? React.createElement(logo_white_svg_1.default, null) : React.createElement(logo_black_svg_1.default, null)),
+            React.createElement(react_router_dom_1.Link, { to: "/Rats", className: "logo" }, this.props.darkMode === isDark ? React.createElement(logo_white_svg_1.default, null) : React.createElement(logo_black_svg_1.default, null)),
             React.createElement("nav", null,
-                React.createElement(react_router_dom_1.NavLink, { to: "/settings", className: "link noSelect", activeClassName: "active" },
+                React.createElement(react_router_dom_1.NavLink, { to: "/Rats/settings", className: "link noSelect", activeClassName: "active" },
                     React.createElement(Settings_1.default, { className: "icon" })),
-                React.createElement(react_router_dom_1.NavLink, { to: "/profile", className: "link noSelect", activeClassName: "active" },
+                React.createElement(react_router_dom_1.NavLink, { to: "/Rats/profile", className: "link noSelect", activeClassName: "active" },
                     React.createElement(PermIdentity_1.default, { className: "icon" })))));
     };
     return Nav;

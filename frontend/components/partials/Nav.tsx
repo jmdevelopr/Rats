@@ -18,12 +18,12 @@ class Nav extends React.Component<Props, any> {
         const isDark: boolean = this.props.dark ? false : true;
         return(
             <div className={`Nav ${this.props.dark ? 'dark' : ''}`}>
-                <Link to="/" className="logo">{this.props.darkMode===isDark ? <LogoLight /> : <LogoDark />}</Link>
+                <Link to="/Rats" className="logo">{this.props.darkMode===isDark ? <LogoLight /> : <LogoDark />}</Link>
                 <nav>
-                    <NavLink to="/settings" className="link noSelect" activeClassName="active">
+                    <NavLink to="/Rats/settings" className="link noSelect" activeClassName="active">
                         <SettingsIcon className="icon" />
                     </NavLink>
-                    <NavLink to="/profile" className="link noSelect" activeClassName="active">
+                    <NavLink to="/Rats/profile" className="link noSelect" activeClassName="active">
                         <PermIdentityIcon className="icon" />
                     </NavLink>
                 </nav>
