@@ -9,7 +9,7 @@ import { LOAD_PREFERENCES } from '../settings/types';
 // newSession has type of an SystemState, it can be anything, its not linked with reducer types, its just an action argument
 
 export const createUser = (userData: IUser): ThunkAction<void, any, unknown, Action> => async dispatch => {
-    const data = await fetch('/api/auth/signup', {
+    const data = await fetch('/Rats/api/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(userData)
@@ -21,7 +21,7 @@ export const createUser = (userData: IUser): ThunkAction<void, any, unknown, Act
 }
 
 export const logInUser = (userData: IUser): ThunkAction<void, any, unknown, Action> => async dispatch => {
-  const data = await fetch('/api/auth/login', {
+  const data = await fetch('/Rats/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(userData)
@@ -33,7 +33,7 @@ export const logInUser = (userData: IUser): ThunkAction<void, any, unknown, Acti
 }
 
 export const logOutUser = (): ThunkAction<void, any, unknown, Action> => async dispatch => {
-    const data = await fetch('/api/auth/logout').then(res => res.json());
+    const data = await fetch('/Rats/api/auth/logout').then(res => res.json());
     dispatch({
           type: LOGOUT_USER,
           data
@@ -41,7 +41,7 @@ export const logOutUser = (): ThunkAction<void, any, unknown, Action> => async d
 }
 
 export const changePassword = (id: string, currentPass: string, newPass: string): ThunkAction<void, any, unknown, Action> => async dispatch => {
-      const data = await fetch('/api/auth/changepass', {
+      const data = await fetch('/Rats/api/auth/changepass', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({userID: id, currentPass, newPass})
@@ -54,7 +54,7 @@ export const changePassword = (id: string, currentPass: string, newPass: string)
 }
 
 export const deleteAcc = (id: string): ThunkAction<void, any, unknown, Action> => async dispatch => {
-      const redirect = await fetch('/api/auth/deleteacc', {
+      const redirect = await fetch('/Rats/api/auth/deleteacc', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({userID: id})
@@ -67,7 +67,7 @@ export const deleteAcc = (id: string): ThunkAction<void, any, unknown, Action> =
 }
 
 export const checkToken = (): ThunkAction<void, any, unknown, Action> => async dispatch => {
-  const data = await fetch('/api/auth/token').then(res => res.json());
+  const data = await fetch('/Rats/api/auth/token').then(res => res.json());
   if(data.preferences)
       dispatch({
             type: LOAD_PREFERENCES,

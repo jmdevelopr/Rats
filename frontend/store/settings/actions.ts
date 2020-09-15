@@ -9,7 +9,7 @@ import { TOGGLE_NAME_DISPLAY, TOGGLE_DARK_MODE, SettingsActionTypes } from './ty
 
 export const toggleNameDisplay = (id: string, preferences: IPreferences): ThunkAction<void, any, unknown, Action> => async dispatch => {
   const data = {id, nameDisplay: preferences.nameDisplay, darkMode: preferences.darkMode}
-  await fetch('/api/settings/changenamedisplay', {
+  await fetch('/Rats/api/settings/changenamedisplay', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
@@ -22,7 +22,7 @@ export const toggleNameDisplay = (id: string, preferences: IPreferences): ThunkA
 
 export const toggleDarkMode = (id: string, preferences: IPreferences): ThunkAction<void, any, unknown, Action> => async dispatch => {
   const data = {id, nameDisplay: preferences.nameDisplay, darkMode: preferences.darkMode}
-  await fetch('/api/settings/changedarkmode', {
+  await fetch('/Rats/api/settings/changedarkmode', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)

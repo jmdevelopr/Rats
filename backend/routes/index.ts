@@ -8,29 +8,29 @@ import { reactUser } from "../middleware/postsMiddleware";
 
 const router: Router = Router();
 
-router.get("/api/posts", getPosts);
+router.get("/Rats/api/posts", getPosts);
 
-router.get("/api/posts/:id", getSinglePost);
+router.get("/Rats/api/posts/:id", getSinglePost);
 
-router.put("/api/posts/:id", addComment);
+router.put("/Rats/api/posts/:id", addComment);
 
-router.put("/api/react", reactUser, reactPost);
+router.put("/Rats/api/react", reactUser, reactPost);
 
-router.post("/api/auth/signup", createUser);
+router.post("/Rats/api/auth/signup", createUser);
 
-router.post("/api/auth/login", logInUser);
+router.post("/Rats/api/auth/login", logInUser);
 
-router.get('/api/auth/logout', logOutUser);
+router.get('/Rats/api/auth/logout', logOutUser);
 
-router.post('/api/auth/changepass', changePassword);
+router.post('/Rats/api/auth/changepass', changePassword);
 
-router.post('/api/auth/deleteacc', deleteAcc, logOutUser);
+router.post('/Rats/api/auth/deleteacc', deleteAcc, logOutUser);
 
-router.get("/api/auth/token", verifyJWT, authCheck);
+router.get("/Rats/api/auth/token", verifyJWT, authCheck);
 
-router.put("/api/settings/changenamedisplay", changeNameDisplay);
+router.put("/Rats/api/settings/changenamedisplay", changeNameDisplay);
 
-router.put("/api/settings/changedarkmode", changeDarkMode);
+router.put("/Rats/api/settings/changedarkmode", changeDarkMode);
 
 //SET ALL THE COOKIES TO SECURE: TRUE (HTTPS CONNECTION)
 

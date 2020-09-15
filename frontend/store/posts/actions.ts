@@ -9,7 +9,7 @@ import { UPDATE_STATE_REACTION } from '../auth/types';
 // newSession has type of an SystemState, it can be anything, its not linked with reducer types, its just an action argument
 
 export const getPosts = (): ThunkAction<void, any, unknown, Action> => async dispatch => {
-  const posts = await fetch('/api/posts').then(res => res.json());
+  const posts = await fetch('/Rats/api/posts').then(res => res.json());
   dispatch({
         type: GET_POSTS,
         posts: posts.posts
@@ -17,7 +17,7 @@ export const getPosts = (): ThunkAction<void, any, unknown, Action> => async dis
 }
 
 export const getSinglePost = (path: string): ThunkAction<void, any, unknown, Action> => async dispatch => {
-  const post = await fetch(`/api/posts${path}`).then(res => res.json());
+  const post = await fetch(`/Rats/api/posts${path}`).then(res => res.json());
   dispatch({
         type: GET_SINGLE_POST,
         post: post.post
@@ -31,7 +31,7 @@ export const addComment = (path: string, comment: IComment, nameDisplay: boolean
     comment: comment.comment,
   };
   
-  const post = await fetch(`/api/posts/${path}`, {
+  const post = await fetch(`/Rats/api/posts/${path}`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
@@ -50,7 +50,7 @@ export const reactAction = (path: string, reactionName: string, userID: string):
     userID,
   };
   
-  const post = await fetch("/api/react", {
+  const post = await fetch("/Rats/api/react", {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
